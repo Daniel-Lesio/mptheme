@@ -1,0 +1,21 @@
+.full-screen-nav {
+    @extend .bg-white;
+    @extend .vw-100;
+    @extend .vh-100;
+    @extend .p-5;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 100;
+    &:not(.d-none) {
+        @extend .flex-center;
+        flex-direction: column;
+    }
+
+    &__close {
+        @extend .p-2;
+        top: 0;
+        right: 0;
+        position: absolute;
+    }
+}

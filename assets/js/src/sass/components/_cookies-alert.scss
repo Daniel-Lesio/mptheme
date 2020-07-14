@@ -1,0 +1,55 @@
+.cookies-alert {
+    background-color: $primary;
+    width: 540px;
+    max-width: 100%;
+    font-size: rem-calc(15);
+    line-height: 1.5;
+    color: color('white');
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 50;
+    @include media-breakpoint-down(xs) {
+        width: calc(100% - 40px);
+    }
+
+    a {
+        color: $white;
+        &:hover {
+            color: $white;
+        }
+    }
+
+    &__close {
+        width: 30px;
+        height: 30px;
+        top: calc(50% - 15px);
+        right: 15px;
+        position: absolute;
+        &:hover {
+            background-color: color('white');
+            cursor: pointer;
+            &::before,
+            &::after {
+                background-color: theme-color('dark');
+            }
+        }
+        &::before,
+        &::after {
+            @include pseudo;
+            top: calc(50% - 1px);
+            left: 0;
+            background-color: color('white');
+            width: 100%;
+            height: 2px;
+        }
+        &::before {
+            transform: rotate(45deg);
+        }
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
+}

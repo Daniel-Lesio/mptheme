@@ -1,0 +1,28 @@
+.flex-center {
+    @extend .d-flex;
+    @extend .align-items-center;
+    @extend .justify-content-center;
+}
+
+.full-bg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.text-underline {
+    text-decoration: underline;
+}
+
+.text-gradient {
+    background: linear-gradient(90deg, $danger 0%, $primary 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.border-right-sm {
+    @include media-breakpoint-up('sm') {
+        border-right: 1px solid $gray-300;
+    }
+}
